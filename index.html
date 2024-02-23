@@ -22,7 +22,17 @@
             <h5>Fashion Week -@2024</h5>
             <h5>News/Articles</h5>
             <h5>Contact</h5>
-            <h6><i class="ri-menu-3-line"></i></h6>
+            <h6 onclick="showSidebar()"><i class="ri-menu-3-line"></i></h6>
+        </div>
+        <div class="sidebar">
+            <h6 onclick="closeSidebar()">
+                <i class="ri-close-fill"></i>
+            </h6>
+            <h5>Home Page</h5>
+            <h5>Portfolio</h5>
+            <h5>Fashion Week -@2024</h5>
+            <h5>News/Articles</h5>
+            <h5>Contact</h5>
         </div>
 
         <div class="left-center">
@@ -46,6 +56,28 @@
             <i class="ri-search-line"></i>
         </div>
     </div>
+
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const body = document.querySelector('body');
+        function showSidebar() {
+            sidebar.style.right = 0;
+        }
+        function closeSidebar() {
+            sidebar.style.right = '-120%';
+        }
+
+        // body.addEventListener('click', (event) => {
+        //     const clickedElement = event.target;
+
+
+        //     if (!sidebar.contains(clickedElement)) {
+        //         closeSidebar();
+        //         console.log('body')
+        //     }
+        // });
+
+    </script>
 </body>
 
 </html>

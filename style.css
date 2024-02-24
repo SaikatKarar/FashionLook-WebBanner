@@ -13,7 +13,7 @@ body {
 }
 
 .main {
-    /* height: 100%; */
+    height: 100vh;
     width: 100%;
     background-color: #ededed;
     display: grid;
@@ -62,7 +62,7 @@ body {
     /* display: none; */
     position: absolute;
     top: 0;
-    right: -120%;
+    right: -130%;
     background-color: #ffffffc2;
     backdrop-filter: blur(10px);
     height: 100vh;
@@ -123,7 +123,8 @@ body {
 }
 
 .right {
-    background-color: #ededed;
+    /* background-color: seagreen; */
+    /* background-color: #ededed; */
     grid-column: 3;
     grid-row: 1/4;
     padding: 40px;
@@ -173,14 +174,14 @@ body {
     font-weight: 600;
 }
 
+
 @media (max-width: 1024px) {
     .main {
         grid-template-columns: 50% 50%;
-        grid-template-rows: 60px 28% 8%;
+        grid-template-rows: 60px 36% 10%;
     }
 
     .left-top-left {
-        /* background-color: rgb(255, 60, 0); */
         padding: 20px;
     }
 
@@ -189,11 +190,8 @@ body {
         width: 25px;
     }
 
-
     .left-top-right {
-        /* background-color: rgb(0, 81, 255); */
-        /* padding: 40px; */
-        padding: 7px 20px 0 0;
+        padding: 14px;
     }
 
     .left-top-right h4 {
@@ -206,36 +204,38 @@ body {
 
     .left-top-right h6 {
         display: initial;
-        font-size: 35px;
-        font-weight: 400;
+        font-size: 32px;
+        font-weight: 300;
     }
 
-    /* .left-center {
-        padding: 50px 40px;
-    } */
+    .left-center {
+        justify-self: center;
+        align-self: center;
+    }
 
     .left-center h1 {
         font-size: 3rem;
-        line-height: 2.4rem;
+        line-height: 2.6rem;
         text-align: center;
+    }
+
+    .left-center h1:nth-child(2n + 1) {
+        padding-right: 100px;
     }
 
     .left-center h1:nth-child(2n) {
-        padding-left: 190px;
+        padding-left: 100px;
+    }
+
+    .left-bottom {
+        align-self: center;
     }
 
     .left-bottom p {
-        width: 78%;
+        width: 80%;
         text-align: center;
         margin-inline: auto;
         font-size: 18px;
-    }
-
-    .arrow {
-        top: 40%;
-        rotate: 90deg;
-        left: 42%;
-        display: none;
     }
 
     .right {
@@ -249,6 +249,12 @@ body {
         object-position: center;
     }
 
+
+    /* &&&&&&&& */
+    .arrow {
+        display: none;
+    }
+
     .src {
         display: none;
     }
@@ -258,80 +264,84 @@ body {
         position: fixed;
     }
 
-    .hero-top-header {
-        margin-top: 50px
-    }
+    /* .sidebar h5 {
+        display: none;
+    } */
 }
 
 @media (max-width: 768px) {
     .main {
-        /* background-color: darkgoldenrod; */
-        grid-template-rows: 60px 27% 10%;
+        /* background-color: rgba(255, 255, 0, 0.548); */
+        grid-template-rows: 60px 38% 10%;
     }
 
-    .right video {
-        margin-top: 24px;
-    }
-
-    .arrow {
-        top: 40%;
-        left: 40%;
+    .left-bottom p {
+        width: 90%;
     }
 
     .right video {
         height: 42vh;
-        object-position: center;
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 481px) {
     .main {
-        /* background-color: darkolivegreen; */
-        grid-template-rows: 60px 24% 12%;
-    }
-
-    .left-center {
-        padding: 12px;
-    }
-
-    .left-center h1 {
-        font-size: 2rem;
-        line-height: 1.8rem;
-        text-align: center;
-    }
-
-    .left-center h1:nth-child(2n) {
-        padding-left: 85px;
-        text-align: center;
+        /* background-color: rgba(0, 255, 0, 0.548); */
+        grid-template-rows: 60px 23% 8%;
     }
 
     .left-bottom p {
         width: 100%;
-        text-align: center;
-        /* margin-left: 118px; */
-        margin-inline: auto;
-        font-size: 18px;
     }
 
-    .arrow {
-        top: 35%;
-        left: 41%;
-        padding: 8px;
+    .left-center h1 {
+        font-size: 2rem;
+        line-height: 2rem;
     }
 
-    .arrow i {
-        font-size: 28px;
+    .left-center h1:nth-child(2n + 1) {
+        padding-right: 80px;
     }
 
-    .right video {
-        height: 38vh;
-        object-position: center;
+    .left-center h1:nth-child(2n) {
+        padding-left: 80px;
+    }
+}
+
+@media (max-width: 409px) {
+    .main {
+        /* background-color: rgba(0, 204, 255, 0.548); */
+        grid-template-rows: 60px 26% 10%;
+    }
+
+    .left-center h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .left-bottom p {
+        font-size: 13px;
     }
 
     .sidebar {
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* hero-section */
 
